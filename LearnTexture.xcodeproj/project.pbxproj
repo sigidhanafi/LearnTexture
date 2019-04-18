@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D83B56AAFD73580F12B6620 /* Pods_LearnTexture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D003A129D472CA9177537DB5 /* Pods_LearnTexture.framework */; };
 		93DA6F832268CE1400B395B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA6F822268CE1400B395B7 /* AppDelegate.swift */; };
-		93DA6F852268CE1400B395B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA6F842268CE1400B395B7 /* ViewController.swift */; };
 		93DA6F882268CE1400B395B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DA6F862268CE1400B395B7 /* Main.storyboard */; };
 		93DA6F8A2268CE1500B395B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93DA6F892268CE1500B395B7 /* Assets.xcassets */; };
 		93DA6F8D2268CE1500B395B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DA6F8B2268CE1500B395B7 /* LaunchScreen.storyboard */; };
+		93DA6F952268D6FA00B395B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA6F942268D6FA00B395B7 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43AEA830D836ADE46B4D4E16 /* Pods-LearnTexture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnTexture.release.xcconfig"; path = "Target Support Files/Pods-LearnTexture/Pods-LearnTexture.release.xcconfig"; sourceTree = "<group>"; };
+		7C5F8334F59094648ABD32C2 /* Pods-LearnTexture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnTexture.debug.xcconfig"; path = "Target Support Files/Pods-LearnTexture/Pods-LearnTexture.debug.xcconfig"; sourceTree = "<group>"; };
 		93DA6F7F2268CE1400B395B7 /* LearnTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DA6F822268CE1400B395B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93DA6F842268CE1400B395B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93DA6F872268CE1400B395B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93DA6F892268CE1500B395B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93DA6F8C2268CE1500B395B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93DA6F8E2268CE1500B395B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93DA6F942268D6FA00B395B7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D003A129D472CA9177537DB5 /* Pods_LearnTexture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnTexture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D83B56AAFD73580F12B6620 /* Pods_LearnTexture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1444495055656E7C262532B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C5F8334F59094648ABD32C2 /* Pods-LearnTexture.debug.xcconfig */,
+				43AEA830D836ADE46B4D4E16 /* Pods-LearnTexture.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		284F07C241C5DB81D7DC07D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D003A129D472CA9177537DB5 /* Pods_LearnTexture.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		93DA6F762268CE1400B395B7 = {
 			isa = PBXGroup;
 			children = (
 				93DA6F812268CE1400B395B7 /* LearnTexture */,
 				93DA6F802268CE1400B395B7 /* Products */,
+				1444495055656E7C262532B7 /* Pods */,
+				284F07C241C5DB81D7DC07D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				93DA6F822268CE1400B395B7 /* AppDelegate.swift */,
-				93DA6F842268CE1400B395B7 /* ViewController.swift */,
+				93DA6F942268D6FA00B395B7 /* MainViewController.swift */,
 				93DA6F862268CE1400B395B7 /* Main.storyboard */,
 				93DA6F892268CE1500B395B7 /* Assets.xcassets */,
 				93DA6F8B2268CE1500B395B7 /* LaunchScreen.storyboard */,
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93DA6F912268CE1500B395B7 /* Build configuration list for PBXNativeTarget "LearnTexture" */;
 			buildPhases = (
+				8181AE887EBF1E72611C635A /* [CP] Check Pods Manifest.lock */,
 				93DA6F7B2268CE1400B395B7 /* Sources */,
 				93DA6F7C2268CE1400B395B7 /* Frameworks */,
 				93DA6F7D2268CE1400B395B7 /* Resources */,
+				0D6ABBE5AD80EBA3448E4344 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +156,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D6ABBE5AD80EBA3448E4344 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnTexture/Pods-LearnTexture-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnTexture/Pods-LearnTexture-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8181AE887EBF1E72611C635A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearnTexture-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		93DA6F7B2268CE1400B395B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93DA6F852268CE1400B395B7 /* ViewController.swift in Sources */,
+				93DA6F952268D6FA00B395B7 /* MainViewController.swift in Sources */,
 				93DA6F832268CE1400B395B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +359,7 @@
 		};
 		93DA6F922268CE1500B395B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C5F8334F59094648ABD32C2 /* Pods-LearnTexture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +378,7 @@
 		};
 		93DA6F932268CE1500B395B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43AEA830D836ADE46B4D4E16 /* Pods-LearnTexture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
