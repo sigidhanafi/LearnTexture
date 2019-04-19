@@ -58,6 +58,7 @@ class MainViewController: ASViewController<ASDisplayNode> {
         startButton.setAttributedTitle(buttonTitle, for: .normal)
         startButton.backgroundColor = UIColor.blue.withAlphaComponent(0.3)
         startButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 32, bottom: 8, right: 32)
+        startButton.addTarget(self, action: #selector(buttonPressed), forControlEvents: .touchUpInside)
         
         node.layoutSpecBlock = { (_, _) -> ASLayoutSpec in
             
@@ -72,6 +73,17 @@ class MainViewController: ASViewController<ASDisplayNode> {
             
             return ASWrapperLayoutSpec(layoutElement: nodeContainer)
         }
+    }
+    
+    @objc private func buttonPressed() {
+        let greetingTextParagraphStyle = NSMutableParagraphStyle()
+        greetingTextParagraphStyle.alignment = .center
+        
+        self.greetingText.attributedText = NSAttributedString(string: "Hello, let's start learn texture. I think it's better if we combine texture with Rx", attributes: [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),
+            NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.70),
+            NSAttributedString.Key.paragraphStyle: greetingTextParagraphStyle
+            ])
     }
 
 }
