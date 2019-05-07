@@ -10,7 +10,8 @@ import AsyncDisplayKit
 class MainViewController: ASViewController<ASDisplayNode> {
     
     private let greetingText = ASTextNode()
-    private let startButton = ASButtonNode()
+    private let startButton = Button(title: "Get Started")
+    private let scrollViewWithEditableTextButton = Button(title: "Scroll with Editable Text")
     
     public init() {
         let node = ASDisplayNode()
@@ -32,13 +33,6 @@ class MainViewController: ASViewController<ASDisplayNode> {
         self.navigationController?.navigationBar.isTranslucent = false
         self.title = "Learn Texture"
         self.view.backgroundColor = UIColor.white
-        
-        startButton.shadowColor = UIColor.black.cgColor
-        startButton.shadowOffset = CGSize(width: 0, height: 2)
-        startButton.shadowOpacity = 0.2
-        startButton.shadowRadius = 3
-        startButton.cornerRadius = 4
-
     }
     
     private func generateView() {
@@ -51,23 +45,16 @@ class MainViewController: ASViewController<ASDisplayNode> {
             NSAttributedString.Key.paragraphStyle: greetingTextParagraphStyle
             ])
         
-        let buttonTitle = NSAttributedString(string: "Getting Started", attributes: [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12),
-            NSAttributedString.Key.foregroundColor: UIColor.white
-            ])
-        startButton.setAttributedTitle(buttonTitle, for: .normal)
-        startButton.backgroundColor = UIColor.blue.withAlphaComponent(0.3)
-        startButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 32, bottom: 8, right: 32)
-        startButton.addTarget(self, action: #selector(buttonPressed), forControlEvents: .touchUpInside)
-        
         node.layoutSpecBlock = { (_, _) -> ASLayoutSpec in
             
             let greetingTextInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16), child: self.greetingText)
             
             let startButtonInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 32, left: 16, bottom: 16, right: 16), child: self.startButton)
             
+            let scrollViewWithEditableTextButtonInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16), child: self.scrollViewWithEditableTextButton)
+            
             let nodeContainer = ASStackLayoutSpec.vertical()
-            nodeContainer.children = [greetingTextInsetWrapper, startButtonInsetWrapper]
+            nodeContainer.children = [greetingTextInsetWrapper, startButtonInsetWrapper, scrollViewWithEditableTextButtonInsetWrapper]
             nodeContainer.justifyContent = .center
             nodeContainer.alignItems = .center
             
