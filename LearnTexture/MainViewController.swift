@@ -9,10 +9,6 @@ import AsyncDisplayKit
 
 class MainViewController: ASViewController<ASDisplayNode> {
     
-    private let greetingText = ASTextNode()
-    private let getStartedButton = Button(title: "Get Started")
-    private let goToScrollViewWithEditableTextButton = Button(title: "Scroll with Editable Text")
-    
     public init() {
         let node = ASDisplayNode()
         node.backgroundColor = .white
@@ -21,6 +17,7 @@ class MainViewController: ASViewController<ASDisplayNode> {
         super.init(node: node)
         
         generateView()
+
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -36,6 +33,10 @@ class MainViewController: ASViewController<ASDisplayNode> {
     }
     
     private func generateView() {
+        let greetingText = ASTextNode()
+        let getStartedButton = Button(title: "Get Started")
+        let goToScrollViewWithEditableTextButton = Button(title: "Scroll with Editable Text")
+        
         let greetingTextParagraphStyle = NSMutableParagraphStyle()
         greetingTextParagraphStyle.alignment = .center
         
@@ -51,11 +52,11 @@ class MainViewController: ASViewController<ASDisplayNode> {
         
         node.layoutSpecBlock = { (_, _) -> ASLayoutSpec in
             
-            let greetingTextInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16), child: self.greetingText)
+            let greetingTextInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), child: greetingText)
             
-            let getStartedButtonInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 32, left: 16, bottom: 16, right: 16), child: self.getStartedButton)
+            let getStartedButtonInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), child: getStartedButton)
             
-            let goToScrollViewWithEditableTextButtonInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16), child: self.goToScrollViewWithEditableTextButton)
+            let goToScrollViewWithEditableTextButtonInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), child: goToScrollViewWithEditableTextButton)
             
             let nodeContainer = ASStackLayoutSpec.vertical()
             nodeContainer.children = [greetingTextInsetWrapper, getStartedButtonInsetWrapper, goToScrollViewWithEditableTextButtonInsetWrapper]
@@ -64,17 +65,6 @@ class MainViewController: ASViewController<ASDisplayNode> {
             
             return ASWrapperLayoutSpec(layoutElement: nodeContainer)
         }
-    }
-    
-    @objc private func buttonPressed() {
-        let greetingTextParagraphStyle = NSMutableParagraphStyle()
-        greetingTextParagraphStyle.alignment = .center
-        
-        self.greetingText.attributedText = NSAttributedString(string: "Hello, let's start learn texture. I think it's better if we combine texture with Rx", attributes: [
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),
-            NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.70),
-            NSAttributedString.Key.paragraphStyle: greetingTextParagraphStyle
-            ])
     }
     
     @objc private func goToGetStartedView() {
