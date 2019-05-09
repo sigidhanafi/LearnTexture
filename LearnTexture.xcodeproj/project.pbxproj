@@ -14,6 +14,7 @@
 		93DA6F8A2268CE1500B395B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93DA6F892268CE1500B395B7 /* Assets.xcassets */; };
 		93DA6F8D2268CE1500B395B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DA6F8B2268CE1500B395B7 /* LaunchScreen.storyboard */; };
 		93DA6F952268D6FA00B395B7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA6F942268D6FA00B395B7 /* MainViewController.swift */; };
+		93E093F42284DBEE00A22A8E /* ImageWithOverlayTexrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E093F32284DBEE00A22A8E /* ImageWithOverlayTexrViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		93DA6F8C2268CE1500B395B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93DA6F8E2268CE1500B395B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93DA6F942268D6FA00B395B7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		93E093F32284DBEE00A22A8E /* ImageWithOverlayTexrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithOverlayTexrViewController.swift; sourceTree = "<group>"; };
 		D003A129D472CA9177537DB5 /* Pods_LearnTexture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnTexture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				93B84CCC2281AFE000ED2CDD /* Components */,
 				93DA6F822268CE1400B395B7 /* AppDelegate.swift */,
 				93DA6F942268D6FA00B395B7 /* MainViewController.swift */,
+				93E093F32284DBEE00A22A8E /* ImageWithOverlayTexrViewController.swift */,
 				93DA6F862268CE1400B395B7 /* Main.storyboard */,
 				93DA6F892268CE1500B395B7 /* Assets.xcassets */,
 				93DA6F8B2268CE1500B395B7 /* LaunchScreen.storyboard */,
@@ -227,6 +230,7 @@
 			files = (
 				93DA6F952268D6FA00B395B7 /* MainViewController.swift in Sources */,
 				93B84CCE2281B00B00ED2CDD /* Button.swift in Sources */,
+				93E093F42284DBEE00A22A8E /* ImageWithOverlayTexrViewController.swift in Sources */,
 				93DA6F832268CE1400B395B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
