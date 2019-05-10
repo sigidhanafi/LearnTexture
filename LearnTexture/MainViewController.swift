@@ -41,11 +41,23 @@ class MainViewController: ASViewController<ASDisplayNode> {
         let greetingTextParagraphStyle = NSMutableParagraphStyle()
         greetingTextParagraphStyle.alignment = .center
         
-        greetingText.attributedText = NSAttributedString(string: "Welcome Sigit, now we will learn about how to use texture / AsyncDisplayKit", attributes: [
+        let greetingName = NSAttributedString(string: "Welcome Sigit, ", attributes: [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12),
+            NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.70),
+            NSAttributedString.Key.paragraphStyle: greetingTextParagraphStyle
+            ])
+        
+        let greetingDesc = NSAttributedString(string: "now we will learn about how to use texture / AsyncDisplayKit", attributes: [
             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),
             NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.70),
             NSAttributedString.Key.paragraphStyle: greetingTextParagraphStyle
             ])
+        
+        let greetingCombineText = NSMutableAttributedString(attributedString: greetingName)
+        greetingCombineText.append(greetingDesc)
+        
+        greetingText.attributedText = greetingCombineText
+
         
         getStartedButton.addTarget(self, action: #selector(goToGetStartedView), forControlEvents: .touchUpInside)
         goToScrollViewWithEditableTextButton.addTarget(self, action: #selector(goToScrollViewWithEditableText), forControlEvents: .touchUpInside)
