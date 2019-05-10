@@ -23,6 +23,10 @@ class ImageWithOverlayTexrViewController: ASViewController<ASDisplayNode> {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewDidLoad() {
+        title = "Image with Overlay Text"
+    }
+    
     func generateView() {
         node.layoutSpecBlock = { (_, constrainedSize) -> ASLayoutSpec in
             let coverImageNode = ASImageNode()

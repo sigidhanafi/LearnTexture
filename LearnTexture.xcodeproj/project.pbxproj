@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7D83B56AAFD73580F12B6620 /* Pods_LearnTexture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D003A129D472CA9177537DB5 /* Pods_LearnTexture.framework */; };
+		934FC0F222852538000254D7 /* ScrollViewWithEditableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FC0F122852538000254D7 /* ScrollViewWithEditableText.swift */; };
+		934FC0F422852789000254D7 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FC0F322852789000254D7 /* TextInput.swift */; };
 		93B84CCE2281B00B00ED2CDD /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B84CCD2281B00B00ED2CDD /* Button.swift */; };
 		93DA6F832268CE1400B395B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA6F822268CE1400B395B7 /* AppDelegate.swift */; };
 		93DA6F882268CE1400B395B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DA6F862268CE1400B395B7 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		43AEA830D836ADE46B4D4E16 /* Pods-LearnTexture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnTexture.release.xcconfig"; path = "Target Support Files/Pods-LearnTexture/Pods-LearnTexture.release.xcconfig"; sourceTree = "<group>"; };
 		7C5F8334F59094648ABD32C2 /* Pods-LearnTexture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnTexture.debug.xcconfig"; path = "Target Support Files/Pods-LearnTexture/Pods-LearnTexture.debug.xcconfig"; sourceTree = "<group>"; };
+		934FC0F122852538000254D7 /* ScrollViewWithEditableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewWithEditableText.swift; sourceTree = "<group>"; };
+		934FC0F322852789000254D7 /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		93B84CCD2281B00B00ED2CDD /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		93DA6F7F2268CE1400B395B7 /* LearnTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DA6F822268CE1400B395B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				93B84CCD2281B00B00ED2CDD /* Button.swift */,
+				934FC0F322852789000254D7 /* TextInput.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 				93DA6F822268CE1400B395B7 /* AppDelegate.swift */,
 				93DA6F942268D6FA00B395B7 /* MainViewController.swift */,
 				93E093F32284DBEE00A22A8E /* ImageWithOverlayTexrViewController.swift */,
+				934FC0F122852538000254D7 /* ScrollViewWithEditableText.swift */,
 				93DA6F862268CE1400B395B7 /* Main.storyboard */,
 				93DA6F892268CE1500B395B7 /* Assets.xcassets */,
 				93DA6F8B2268CE1500B395B7 /* LaunchScreen.storyboard */,
@@ -232,6 +238,8 @@
 				93B84CCE2281B00B00ED2CDD /* Button.swift in Sources */,
 				93E093F42284DBEE00A22A8E /* ImageWithOverlayTexrViewController.swift in Sources */,
 				93DA6F832268CE1400B395B7 /* AppDelegate.swift in Sources */,
+				934FC0F222852538000254D7 /* ScrollViewWithEditableText.swift in Sources */,
+				934FC0F422852789000254D7 /* TextInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

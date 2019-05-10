@@ -87,7 +87,8 @@ class MainViewController: ASViewController<ASDisplayNode> {
     }
     
     @objc private func goToScrollViewWithEditableText() {
-        print("GO TO Scroll View with Editable Text")
+        let scrollViewWithEditableTextVC = ScrollViewWithEditableText()
+        self.navigationController?.pushViewController(scrollViewWithEditableTextVC, animated: true)
     }
     
     @objc private func gotToImageWithOverlayText() {
