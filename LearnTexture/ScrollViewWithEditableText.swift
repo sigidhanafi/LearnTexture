@@ -9,6 +9,18 @@
 import AsyncDisplayKit
 
 class ScrollViewWithEditableText: ASViewController<ASScrollNode> {
+    private let firstNameTextInput = TextInput(label: "First Name")
+    private let lastNameTextInput = TextInput(label: "Last Name")
+    private let addressTextArea = TextArea(label: "Address")
+    private let placeOfBirth = TextInput(label: "Place of Birth")
+    private let provinceTextInput = TextInput(label: "Province")
+    private let cityTextInput = TextInput(label: "City")
+    private let districtTextInput = TextInput(label: "District")
+    private let occupationTextInput = TextInput(label: "Occupation")
+    private let positionTextInput = TextInput(label: "Position")
+    private let interestTextInput = TextInput(label: "Interest")
+    private let saveButtonNode = Button(title: "Save")
+    
     init() {
         let scrollNode = ASScrollNode()
         scrollNode.automaticallyManagesSubnodes = true
@@ -26,19 +38,23 @@ class ScrollViewWithEditableText: ASViewController<ASScrollNode> {
     
     override func viewDidLoad() {
         title = "ScrollView with Editable Text"
+        
+        node.view.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 200, right: 0)
+        node.view.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 200, right: 0)
+        node.view.scrollRectToVisible(self.interestTextInput.frame, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        node.view.scrollRectToVisible(self.interestTextInput.frame, animated: true)
     }
     
     private func generateView() {
         node.layoutSpecBlock = { (_, constrainedSize) in
-            
-            let firstNameTextInput = TextInput(label: "First Name")
-            
-            let lastNameTextInput = TextInput(label: "Last Name")
-            
-            let addressTextArea = TextArea(label: "Address")
+            let saveButtonInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), child: self.saveButtonNode)
             
             let formVerticalWrapper = ASStackLayoutSpec.vertical()
-            formVerticalWrapper.children = [firstNameTextInput, lastNameTextInput, addressTextArea]
+            formVerticalWrapper.children = [self.firstNameTextInput, self.lastNameTextInput, self.addressTextArea, self.placeOfBirth, self.provinceTextInput, self.cityTextInput, self.districtTextInput, self.occupationTextInput, self.positionTextInput, self.interestTextInput,  saveButtonInsetWrapper]
             
             return formVerticalWrapper
         }
