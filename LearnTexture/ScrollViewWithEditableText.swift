@@ -20,6 +20,7 @@ class ScrollViewWithEditableText: ASViewController<ASScrollNode> {
     private let positionTextInput = TextInput(label: "Position")
     private let interestTextInput = TextInput(label: "Interest")
     private let saveButtonNode = Button(title: "Save")
+    private var activeTextInput: ASEditableTextNode?
     
     init() {
         let scrollNode = ASScrollNode()
@@ -39,14 +40,13 @@ class ScrollViewWithEditableText: ASViewController<ASScrollNode> {
     override func viewDidLoad() {
         title = "ScrollView with Editable Text"
         
-        node.view.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 200, right: 0)
-        node.view.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 200, right: 0)
-        node.view.scrollRectToVisible(self.interestTextInput.frame, animated: true)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification , object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification , object: nil)
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        node.view.scrollRectToVisible(self.interestTextInput.frame, animated: true)
     }
     
     private func generateView() {
@@ -58,5 +58,24 @@ class ScrollViewWithEditableText: ASViewController<ASScrollNode> {
             
             return formVerticalWrapper
         }
+    }
+    
+    @objc func keyboardWillShow(notification: Notification) {
+        let userInfo = notification.userInfo
+        guard let keyboardFrame = userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
+            return
+        }
+        
+        let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardFrame.size.height, right: 0)
+        node.view.contentInset = contentInset
+        node.view.scrollIndicatorInsets = contentInset
+        node.view.scrollRectToVisible(self.saveButtonNode.frame, animated: true)
+        
+    }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+        let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
+        node.view.contentInset = contentInset
+        node.view.scrollIndicatorInsets = contentInset
     }
 }
