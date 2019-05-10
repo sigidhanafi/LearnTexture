@@ -35,8 +35,10 @@ class ScrollViewWithEditableText: ASViewController<ASScrollNode> {
             
             let lastNameTextInput = TextInput(label: "Last Name")
             
+            let addressTextArea = TextArea(label: "Address")
+            
             let formVerticalWrapper = ASStackLayoutSpec.vertical()
-            formVerticalWrapper.children = [firstNameTextInput, lastNameTextInput]
+            formVerticalWrapper.children = [firstNameTextInput, lastNameTextInput, addressTextArea]
             
             return formVerticalWrapper
         }
