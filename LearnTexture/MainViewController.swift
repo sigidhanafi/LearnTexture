@@ -37,6 +37,7 @@ class MainViewController: ASViewController<ASDisplayNode> {
         let getStartedButton = Button(title: "Get Started")
         let goToScrollViewWithEditableTextButton = Button(title: "Scroll with Editable Text")
         let goToImageWithOverlayTextButton = Button(title: "Image with Overlay Text")
+        let goToImageWithAbsoluteIconButton = Button(title: "Image with Absolute Icon")
         
         let greetingTextParagraphStyle = NSMutableParagraphStyle()
         greetingTextParagraphStyle.alignment = .center
@@ -61,7 +62,8 @@ class MainViewController: ASViewController<ASDisplayNode> {
         
         getStartedButton.addTarget(self, action: #selector(goToGetStartedView), forControlEvents: .touchUpInside)
         goToScrollViewWithEditableTextButton.addTarget(self, action: #selector(goToScrollViewWithEditableText), forControlEvents: .touchUpInside)
-        goToImageWithOverlayTextButton.addTarget(self, action: #selector(gotToImageWithOverlayText), forControlEvents: .touchUpInside)
+        goToImageWithOverlayTextButton.addTarget(self, action: #selector(goToImageWithOverlayText), forControlEvents: .touchUpInside)
+        goToImageWithAbsoluteIconButton.addTarget(self, action: #selector(goToImageWithAbsoluteIcon), forControlEvents: .touchUpInside)
         
         node.layoutSpecBlock = { (_, _) -> ASLayoutSpec in
             
@@ -73,8 +75,10 @@ class MainViewController: ASViewController<ASDisplayNode> {
             
             let goToImageWithOverlayTextButtonInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), child: goToImageWithOverlayTextButton)
             
+            let goToImageWithAbsoluteIconButtonInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), child: goToImageWithAbsoluteIconButton)
+            
             let nodeContainer = ASStackLayoutSpec.vertical()
-            nodeContainer.children = [greetingTextInsetWrapper, getStartedButtonInsetWrapper, goToScrollViewWithEditableTextButtonInsetWrapper, goToImageWithOverlayTextButtonInsetWrapper]
+            nodeContainer.children = [greetingTextInsetWrapper, getStartedButtonInsetWrapper, goToScrollViewWithEditableTextButtonInsetWrapper, goToImageWithOverlayTextButtonInsetWrapper, goToImageWithAbsoluteIconButtonInsetWrapper]
             nodeContainer.justifyContent = .center
             nodeContainer.alignItems = .center
             
@@ -91,9 +95,14 @@ class MainViewController: ASViewController<ASDisplayNode> {
         self.navigationController?.pushViewController(scrollViewWithEditableTextVC, animated: true)
     }
     
-    @objc private func gotToImageWithOverlayText() {
+    @objc private func goToImageWithOverlayText() {
         let imageWithOverlayVC = ImageWithOverlayTexrViewController()
         self.navigationController?.pushViewController(imageWithOverlayVC, animated: true)
+    }
+    
+    @objc private func goToImageWithAbsoluteIcon() {
+        let imageWithAbsoluteIconVC = ImageWithAbsoluteIcon()
+        self.navigationController?.pushViewController(imageWithAbsoluteIconVC, animated: true)
     }
 
 }

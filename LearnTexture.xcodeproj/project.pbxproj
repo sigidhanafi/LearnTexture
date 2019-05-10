@@ -11,6 +11,7 @@
 		934FC0F222852538000254D7 /* ScrollViewWithEditableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FC0F122852538000254D7 /* ScrollViewWithEditableText.swift */; };
 		934FC0F422852789000254D7 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FC0F322852789000254D7 /* TextInput.swift */; };
 		934FC0F622853434000254D7 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FC0F522853434000254D7 /* TextArea.swift */; };
+		934FC0F82285A572000254D7 /* ImageWithAbsoluteIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FC0F72285A572000254D7 /* ImageWithAbsoluteIcon.swift */; };
 		93B84CCE2281B00B00ED2CDD /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B84CCD2281B00B00ED2CDD /* Button.swift */; };
 		93DA6F832268CE1400B395B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA6F822268CE1400B395B7 /* AppDelegate.swift */; };
 		93DA6F882268CE1400B395B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DA6F862268CE1400B395B7 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		934FC0F122852538000254D7 /* ScrollViewWithEditableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewWithEditableText.swift; sourceTree = "<group>"; };
 		934FC0F322852789000254D7 /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		934FC0F522853434000254D7 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
+		934FC0F72285A572000254D7 /* ImageWithAbsoluteIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithAbsoluteIcon.swift; sourceTree = "<group>"; };
 		93B84CCD2281B00B00ED2CDD /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		93DA6F7F2268CE1400B395B7 /* LearnTexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnTexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DA6F822268CE1400B395B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				93DA6F942268D6FA00B395B7 /* MainViewController.swift */,
 				93E093F32284DBEE00A22A8E /* ImageWithOverlayTexrViewController.swift */,
 				934FC0F122852538000254D7 /* ScrollViewWithEditableText.swift */,
+				934FC0F72285A572000254D7 /* ImageWithAbsoluteIcon.swift */,
 				93DA6F862268CE1400B395B7 /* Main.storyboard */,
 				93DA6F892268CE1500B395B7 /* Assets.xcassets */,
 				93DA6F8B2268CE1500B395B7 /* LaunchScreen.storyboard */,
@@ -242,6 +245,7 @@
 				93B84CCE2281B00B00ED2CDD /* Button.swift in Sources */,
 				93E093F42284DBEE00A22A8E /* ImageWithOverlayTexrViewController.swift in Sources */,
 				93DA6F832268CE1400B395B7 /* AppDelegate.swift in Sources */,
+				934FC0F82285A572000254D7 /* ImageWithAbsoluteIcon.swift in Sources */,
 				934FC0F222852538000254D7 /* ScrollViewWithEditableText.swift in Sources */,
 				934FC0F422852789000254D7 /* TextInput.swift in Sources */,
 			);

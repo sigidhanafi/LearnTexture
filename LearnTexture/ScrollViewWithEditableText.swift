@@ -51,7 +51,7 @@ class ScrollViewWithEditableText: ASViewController<ASScrollNode> {
     
     private func generateView() {
         node.layoutSpecBlock = { (_, constrainedSize) in
-            let saveButtonInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), child: self.saveButtonNode)
+            let saveButtonInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16), child: self.saveButtonNode)
             
             let formVerticalWrapper = ASStackLayoutSpec.vertical()
             formVerticalWrapper.children = [self.firstNameTextInput, self.lastNameTextInput, self.addressTextArea, self.placeOfBirth, self.provinceTextInput, self.cityTextInput, self.districtTextInput, self.occupationTextInput, self.positionTextInput, self.interestTextInput,  saveButtonInsetWrapper]
@@ -74,7 +74,7 @@ class ScrollViewWithEditableText: ASViewController<ASScrollNode> {
     }
     
     @objc func keyboardWillHide(notification: Notification) {
-        let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
+        let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         node.view.contentInset = contentInset
         node.view.scrollIndicatorInsets = contentInset
     }
