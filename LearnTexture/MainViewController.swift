@@ -9,6 +9,8 @@ import AsyncDisplayKit
 
 class MainViewController: ASViewController<ASDisplayNode> {
     
+    private let greetingText = ASTextNode()
+    
     public init() {
         let node = ASDisplayNode()
         node.backgroundColor = .white
@@ -33,7 +35,6 @@ class MainViewController: ASViewController<ASDisplayNode> {
     }
     
     private func generateView() {
-        let greetingText = ASTextNode()
         let getStartedButton = Button(title: "Get Started")
         let goToScrollViewWithEditableTextButton = Button(title: "Scroll with Editable Text")
         let goToImageWithOverlayTextButton = Button(title: "Image with Overlay Text")
@@ -67,7 +68,7 @@ class MainViewController: ASViewController<ASDisplayNode> {
         
         node.layoutSpecBlock = { (_, _) -> ASLayoutSpec in
             
-            let greetingTextInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), child: greetingText)
+//            let greetingTextInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), child: greetingText)
             
             let getStartedButtonInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), child: getStartedButton)
             
@@ -78,7 +79,7 @@ class MainViewController: ASViewController<ASDisplayNode> {
             let goToImageWithAbsoluteIconButtonInsetWrapper = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16), child: goToImageWithAbsoluteIconButton)
             
             let nodeContainer = ASStackLayoutSpec.vertical()
-            nodeContainer.children = [greetingTextInsetWrapper, getStartedButtonInsetWrapper, goToScrollViewWithEditableTextButtonInsetWrapper, goToImageWithOverlayTextButtonInsetWrapper, goToImageWithAbsoluteIconButtonInsetWrapper]
+            nodeContainer.children = [self.greetingText, getStartedButtonInsetWrapper, goToScrollViewWithEditableTextButtonInsetWrapper, goToImageWithOverlayTextButtonInsetWrapper, goToImageWithAbsoluteIconButtonInsetWrapper]
             nodeContainer.justifyContent = .center
             nodeContainer.alignItems = .center
             
